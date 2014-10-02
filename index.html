@@ -3,31 +3,31 @@
 <meta name="description" content="Rapid colour scheme designer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spectrum: Rapid colour scheme designer</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="font-awesome.css" />
 
 <main>
-	<div id="rgb">
-		<input type="range" id="red" />
-		<input type="range" id="green" />
-		<input type="range" id="blue" />
+	<div id="settings">
+		<div id="controls">
+			<label for="toggle-rgb"><i class="fa fa-sliders"></i></label>
+			<label for="toggle-share"><i class="fa fa-share-alt"></i></label>
+		</div>
+
+		<input type="radio" class="toggle" id="toggle-rgb"
+			name="toggle-settings" value="rgb" />
+		<section class="togglePanel rgb">
+			<input type="range" id="red" />
+			<input type="range" id="green" />
+			<input type="range" id="blue" />
+		</section>
 	</div>
 
 
 	<ol>
-		<li>
-			<input type="radio" class="toggle" id="toggle-1"
-				name="toggle-colour" checked />
-			<label class="card l1" for="toggle-1"></label>
-		</li>
-		<li>
-			<input type="radio" class="toggle" id="toggle-2"
+		<li class="colourToggleItem">
+			<input type="radio" class="toggle" id="toggle-"
 				name="toggle-colour" />
-			<label class="card l2" for="toggle-2"></label>
-		</li>
-		<li>
-			<input type="radio" class="toggle" id="toggle-3"
-				name="toggle-colour" />
-			<label class="card l3" for="toggle-3"></label>
+			<label class="card" for="toggle-"></label>
 		</li>
 	</ol>
 </main>

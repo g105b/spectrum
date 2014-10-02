@@ -2,6 +2,7 @@
 
 var
 	colourList = document.querySelector("main>ol"),
+	addButton = document.querySelector("#btn-add"),
 $;
 
 function setLefts() {
@@ -12,7 +13,8 @@ function setLefts() {
 	[].forEach.call(this.querySelectorAll(".card"), function(card) {
 		var
 			left = [card.parentNode.offsetLeft, "px"].join(""),
-			translatePercent = 150 * i,
+			offset = 150,
+			translatePercent = (offset * i) - (offset * 1.5),
 		$;
 
 		card.style.transform = [
@@ -28,8 +30,32 @@ function setLefts() {
 	});
 }
 
+function createColourToggleItems() {
+	var
+		liTemplate = colourList.querySelector(".colourToggleItem"),
+		li,
+		numLi = 6,
+		i = 0,
+	$;
+
+	liTemplate.remove();
+
+	for(; i < numLi; ++i) {
+		li = liTemplate.cloneNode(true);
+		li.querySelector("input").id += i;
+		li.querySelector("label").setAttribute("for",
+			li.querySelector("label").getAttribute("for") + i);
+
+		colourList.appendChild(li);
+	}
+
+	colourList.querySelector(".toggle").checked = true;
+}
+
 colourList.addEventListener("DOMNodeInserted", setLefts);
 colourList.addEventListener("DOMNodeRemoved", setLefts);
 setLefts.call(colourList);
+
+createColourToggleItems();
 
 })();
