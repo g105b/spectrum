@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="description" content="Rapid colour scheme designer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectrum: Rapid colour scheme designer</title>
+<link rel="stylesheet" href="style.css">
+
+<main>
+	<div id="rgb">
+		<input type="range" id="red" />
+		<input type="range" id="green" />
+		<input type="range" id="blue" />
+	</div>
+
+
+	<ol>
+		<li>
+			<input type="radio" class="toggle" id="toggle-1"
+				name="toggle-colour" checked />
+			<label class="card l1" for="toggle-1"></label>
+		</li>
+		<li>
+			<input type="radio" class="toggle" id="toggle-2"
+				name="toggle-colour" />
+			<label class="card l2" for="toggle-2"></label>
+		</li>
+		<li>
+			<input type="radio" class="toggle" id="toggle-3"
+				name="toggle-colour" />
+			<label class="card l3" for="toggle-3"></label>
+		</li>
+	</ol>
+</main>
+
+<script src="script.js"></script>
