@@ -9,8 +9,6 @@ body {
 
 .card {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-	-webkit-transform: scale(1);
-	transform: scale(1);
 }
 
 .toggle:not(:checked)~.card {
@@ -50,12 +48,15 @@ main>ol>li {
 main>ol>li>label {
 	position: absolute;
 	display: block;
-	width: 10vw;
-	height: 10vw;
-	top: 90vw;
+	width: 80vw;
+	height: 80vw;
+	left: 10vw;
+	top: 0;
 
-	-webkit-transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
-	transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+	/*transform: */
+
+	/*transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 1.5);*/
+	transition: all 500ms cubic-bezier(0.75,-0.25,.25,1.25);
 }
 
 main>ol>li>.toggle {
@@ -66,7 +67,8 @@ main>ol>li>.toggle:checked~label {
 	width: 80vw;
 	height: 80vw;
 	top: 0;
-	left: 10vw !important; /*property inline by default, needs important*/
+	transform: scale(1) !important;
+	/*left: 10vw !important; /*property inline by default, needs important*/
 }
 
 label {
